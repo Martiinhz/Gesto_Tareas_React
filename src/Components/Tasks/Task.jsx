@@ -1,9 +1,19 @@
 import '../Tasks/Tasks.css'
 
-export const Task = ({children}) => {
+export const Task = ({ children }) => {
   return (
-    <ul>
-       {children}
-    </ul>
+    <>
+      <div className='tareas'>
+        <ul>
+          <div className='tareas-info'>
+            <p>Titulo</p>
+            <p>Descripcion</p>
+          </div>
+          {children}
+        </ul>
+      </div>
+
+    </>
+
   )
 }

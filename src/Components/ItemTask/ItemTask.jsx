@@ -1,14 +1,14 @@
 import React from 'react';
 import '../ItemTask/ItemTask.css';
 
-export const ItemTask = ({ title, description, completed, Completion }) => {
+export const ItemTask = ({ title, description, marked, Completion }) => {
   return (
-    <div className={`item ${completed ? 'completed' : ''}`}>
+    <div className={`item ${marked ? 'completed' : ''}`}>
       <li>
         <b>{title}</b>
-        {description} {/* Cambiado de b a span para la descripción */}
+        {description} 
       </li>
-      <input type="checkbox" checked={completed} onChange={Completion} />
+      <input type="checkbox" checked={marked} onChange={Completion} />
     </div>
   );
 };

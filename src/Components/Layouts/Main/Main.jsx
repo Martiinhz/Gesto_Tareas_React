@@ -6,8 +6,8 @@ import { ItemTask } from '../../ItemTask/ItemTask';
 import { tasksContext } from '../../Context/Context';
 import TaskCounter from '../../TaskConter/taskConter';
 
-export const Main = () => { // Define el componente Main y lo exporta
-  const context = useContext(tasksContext); // Obtiene el contexto de tareas utilizando el hook useContext
+export const Main = () => { 
+  const context = useContext(tasksContext); 
 
   const [titleTask, setTitleTask] = useState(''); // Define un estado para el título de la tarea y una función para actualizarlo
   const [descriptionTask, setDescriptionTask] = useState(''); // Define un estado para la descripción de la tarea y una función para actualizarla
@@ -24,7 +24,7 @@ export const Main = () => { // Define el componente Main y lo exporta
     setTitleTask(''); // Restablece el estado del título de la tarea
     setDescriptionTask(''); // Restablece el estado de la descripción de la tarea
 
-    console.log(titleTask); // Imprime el título de la tarea en la consola (aunque debido a la naturaleza asincrónica de setState, puede que no muestre el valor actualizado)
+    console.log(titleTask); 
   };
 
   const handleTaskCompletion = (index) => { // Define una función para manejar la marca de una tarea como completada o no completada
@@ -34,30 +34,30 @@ export const Main = () => { // Define el componente Main y lo exporta
   };
 
   return (
-    <main> {/* Renderiza el contenido principal del componente */}
-      <div className='inputs'> {/* Renderiza un contenedor para los campos de entrada */}
-        <div className='input'> {/* Renderiza un campo de entrada para el título de la tarea */}
+    <main> 
+      <div className='inputs'> 
+        <div className='input'> 
           <h5>Titulo tarea:</h5>
           <input onChange={(event) => setTitleTask(event.target.value)} type='text' id='title' value={titleTask} />
         </div>
-        <div className='input'> {/* Renderiza un campo de entrada para la descripción de la tarea */}
+        <div className='input'> 
           <h5>Descripcion Tarea:</h5>
           <input onChange={(event) => setDescriptionTask(event.target.value)} type='text' id='description' value={descriptionTask} />
         </div>
-        <button type='button' onClick={handleTask}> {/* Renderiza un botón para crear una tarea y llama a la función handleTask cuando se hace clic */}
+        <button type='button' onClick={handleTask}> 
           Crear
         </button>
       </div>
-      <TaskCounter tasks={context.tasks} /> {/* Renderiza un componente TaskCounter y pasa la lista de tareas como prop */}
-      <Filter /> {/* Renderiza un componente Filter */}
-      <Task> {/* Renderiza un componente Task */}
-        {context.tasks.map((task, index) => ( /* Itera sobre la lista de tareas y renderiza un componente ItemTask para cada tarea */
+      <TaskCounter tasks={context.tasks} />
+      <Filter /> 
+      <Task>
+        {context.tasks.map((task, index) => ( 
           <ItemTask
-            key={index} // Asigna un identificador único a cada tarea
-            title={task.title} // Pasa el título de la tarea como prop
-            description={task.description} // Pasa la descripción de la tarea como prop
-            completed={task.state} // Pasa el estado de completitud de la tarea como prop
-            Completion={() => handleTaskCompletion(index)} // Pasa una función para manejar la completitud de la tarea como prop
+            key={index} //
+            title={task.title} 
+            description={task.description}
+            marked={task.state} // Pasa el estado de la tarea
+            Completion={() => handleTaskCompletion(index)} // llamo a la funcion que da el cambio de la tarea 
           />
         ))}
       </Task>

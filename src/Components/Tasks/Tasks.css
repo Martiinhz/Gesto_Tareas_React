@@ -9,3 +9,14 @@ ul{
     margin-bottom: 50px;
     color: white;
 }
+
+.tareas{
+    display: flex;
+    justify-content: center;
+}
+
+
+.tareas-info{
+    display: flex;
+    justify-content: space-evenly;
+}
