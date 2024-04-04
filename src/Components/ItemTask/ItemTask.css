@@ -1,0 +1,35 @@
+.item{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 5vw;
+    margin-top: 3vh;
+    font-size: 3.5vh;
+    text-align: center;
+}
+
+li::marker{
+    font-size: 5vh;
+}
+
+.item li{
+    color: red;
+}
+
+.item input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+  }
+  
+.item b{
+    margin-right: 50px;
+    color: white;
+}
+  
+  .completed li {
+    text-decoration: line-through;
+    color: green;
+  }
+  

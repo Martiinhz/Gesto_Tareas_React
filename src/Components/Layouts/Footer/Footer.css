@@ -1,0 +1,15 @@
+footer{
+    background-color: #31363F;
+    height: 10vh;
+    width: 100vw;
+    color: white;
+    box-shadow: inset 0 4px 4px #FF1E1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h1{
+    padding: 0;
+    margin: 0;
+}

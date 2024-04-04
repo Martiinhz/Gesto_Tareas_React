@@ -1,0 +1,11 @@
+ul{
+    width: 70%;
+    background-color: #31363F;;
+    border-radius: 20px;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 20px #FF1E1E;
+    margin-bottom: 50px;
+    color: white;
+}

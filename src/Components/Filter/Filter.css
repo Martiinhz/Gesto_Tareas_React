@@ -1,0 +1,20 @@
+.filter{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 10vw;
+    color: white;
+}
+
+.filter > h2{
+    margin-right: 20px;
+    text-shadow: 2px 4px 4px #FF1E1E;
+}
+
+#select{
+    background-color: #31363F;
+    color: white;
+    border: solid #FF1E1E;
+    border-radius: 10px;
+    font-size: 1rem;
+}

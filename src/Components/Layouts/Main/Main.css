@@ -1,0 +1,53 @@
+.inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+.input > h5{
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    text-shadow: 2px 4px 4px #FF1E1E;
+}
+
+.input > input{
+    border-radius: 50px;
+}
+
+main{
+    background-color: #31363F;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.recordatorio hr{
+width: 80%;
+background-color: white;
+}
+
+.recordatorio h2{
+    font-size: 4vh;
+    color: rgba(255, 0, 0, 0.705);
+}
+
+ul{
+    align-self: center;
+}
+
+.inputs > button{
+    background-color: #FF1E1E;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: white;
+    padding: 5px;
+}
