@@ -65,7 +65,23 @@ button:focus-visible {
   }
   button {
     background-color: #16FF00;
+    
   }
 }
 
 
+@media (max-width: 844px) and (min-width: 390px){
+  .inputs{
+    display: block;
+  }
+
+  .input{
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .item b{
+    margin-right: 30px;
+    color: white;
+}
+}
